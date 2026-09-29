@@ -1,0 +1,142 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.container {
+  width: min(94%, 720px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0 6px;
+  font-size: clamp(28px, 7vw, 44px);
+}
+
+.subtitle {
+  margin: 0 auto 20px;
+  color: #5f6b7a;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stats div {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+.stats span {
+  display: block;
+  font-size: 13px;
+  color: #6c7685;
+}
+
+.stats strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 25px;
+}
+
+.ad-slot {
+  min-height: 70px;
+  margin: 14px 0;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #b8c0cc;
+  background: #eef1f5;
+  color: #8993a2;
+  font-size: 11px;
+}
+
+.game-area {
+  position: relative;
+  height: 420px;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+  border: 2px solid #dfe5ed;
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+  touch-action: manipulation;
+}
+
+.target {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  display: none;
+  border: 5px solid white;
+  border-radius: 50%;
+  background: #ff4d5a;
+  box-shadow: 0 3px 12px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.target:active {
+  transform: scale(.9);
+}
+
+.message {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  background: rgba(255,255,255,.94);
+}
+
+.message h2 {
+  margin: 0;
+}
+
+button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #1769e0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(.95);
+}
+
+.restart {
+  display: none;
+  margin: 8px auto 0;
+}
+
+.result {
+  min-height: 24px;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 25px;
+  color: #7b8491;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .container { padding-top: 14px; }
+  .game-area { height: 360px; }
+  .target { width: 52px; height: 52px; }
+}

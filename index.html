@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Click the Circle - a simple free browser game.">
+  <title>Click the Circle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🎯 Click the Circle</h1>
+    <p class="subtitle">Click the circle as many times as you can in 30 seconds!</p>
+
+    <section class="stats" aria-label="Game statistics">
+      <div><span>Score</span><strong id="score">0</strong></div>
+      <div><span>Time</span><strong id="time">30</strong></div>
+      <div><span>Best</span><strong id="best">0</strong></div>
+    </section>
+
+    <div class="ad-slot">ADVERTISEMENT</div>
+
+    <section id="gameArea" class="game-area" aria-label="Game area">
+      <div id="message" class="message">
+        <h2>Ready?</h2>
+        <button id="startBtn">Start Game</button>
+      </div>
+      <button id="target" class="target" aria-label="Click target"></button>
+    </section>
+
+    <div class="ad-slot">ADVERTISEMENT</div>
+
+    <p id="result" class="result" aria-live="polite"></p>
+    <button id="restartBtn" class="restart" type="button">Play Again</button>
+
+    <footer>
+      <p>Simple browser game • Free to play</p>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
